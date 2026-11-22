@@ -9,6 +9,8 @@ import Inventory from "./pages/Inventory";
 import Suppliers from "./pages/Suppliers";
 import Purchases from "./pages/Purchases";
 import Forecast from "./pages/Forecast";
+import Outlets from "./pages/Outlets";
+import Expenses from "./pages/Expenses";
 
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
         <Route path="/inventory" element={<Inventory />} />
         <Route path="/suppliers" element={<Suppliers />} />
         <Route path="/purchases" element={<Purchases />} />
+        <Route path="/outlets" element={<Outlets />} />
         <Route path="/forecasts" element={<Forecast />} />
+        <Route path="/expenses" element={<Expenses />} />
       </Routes>
     </BrowserRouter>
   );

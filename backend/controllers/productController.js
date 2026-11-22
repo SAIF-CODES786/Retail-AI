@@ -1,15 +1,25 @@
 const Product = require("../models/Product");
 
 // CREATE PRODUCT
+// CREATE PRODUCT
 const createProduct = async (req, res) => {
   try {
-    const product = await Product.create(req.body);
+    const productData = { ...req.body };
+
+    // Empty supplier ko remove karo
+    if (!productData.supplier) {
+      delete productData.supplier;
+    }
+
+    const product = await Product.create(productData);
 
     res.status(201).json({
       message: "Product created successfully",
       product,
     });
   } catch (error) {
+    console.log("PRODUCT CREATE ERROR:", error);
+
     res.status(500).json({
       message: "Failed to create product",
       error: error.message,
