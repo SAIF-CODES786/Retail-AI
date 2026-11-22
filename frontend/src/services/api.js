@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://retail-ai-hl03.onrender.com", // Replace with your backend API URL
+  baseURL: "http://localhost:5000/api",
   headers: {
     "Content-Type": "application/json",
   },
