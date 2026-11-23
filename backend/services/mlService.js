@@ -2,7 +2,7 @@
 const axios = require("axios");
 
 const ML_SERVICE_URL =
-  process.env.ML_SERVICE_URL || "http://127.0.0.1:8000";
+  process.env.ML_SERVICE_URL || "https://retail-ai-ml.onrender.com";
 
 // Existing sales prediction
 const predictRetailSales = async (inputData) => {
